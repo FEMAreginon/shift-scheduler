@@ -2,11 +2,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Helvetica, Arial, sans-serif;
     margin: auto;
-    max-width: 38rem;
-    padding: 2rem;
+    background-color: #45c5ba;
 }
 
 .main {
+    width: 90%;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -22,25 +22,39 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 50px;
-    width: 200px;
+    width: 300px;
 }
 
-h1,
-p {
-    text-align: center;
-    width: auto;
-}
-
-.button-container {
-    height: 250px;
+.welcome-wrapper {
+    height: 400px;
     position: relative;
+    background-color: aliceblue;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 0 10px #2e857d;
+    -moz-box-shadow: 0 0 10px #2e857d;
+    box-shadow: 0 0 10px #2e857d;
 }
 
 .button-center {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+h1 {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+p {
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: medium;
+    text-align: center;
 }
