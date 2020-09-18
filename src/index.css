@@ -19,14 +19,15 @@ body {
 
 .logo {
     display: block;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     width: 300px;
 }
 
 .welcome-wrapper {
-    height: 400px;
+    height: 500px;
     position: relative;
     background-color: aliceblue;
     border-radius: 7px;
@@ -49,16 +50,12 @@ h1 {
     margin-right: 10px;
     text-align: center;
     padding-top: 50px;
-
 }
 
 p {
-    margin-top: 60px;
+    margin-top: 90px;
     margin-left: 50px;
     margin-right: 50px;
-    font-size: medium;
+    font-size: 20px;
     text-align: center;
 }
-
-
-
