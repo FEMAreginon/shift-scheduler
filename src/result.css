@@ -22,7 +22,6 @@ body {
     padding-right: 45px;
     padding-top: 5px;
     padding-bottom: 5px;
-
     height: 880px;
     position: relative;
     background-color: aliceblue;
@@ -30,4 +29,13 @@ body {
     -webkit-box-shadow: 0 0 10px #2e857d;
     -moz-box-shadow: 0 0 10px #2e857d;
     box-shadow: 0 0 10px #2e857d;
+}
+
+.button-center {
+    margin: 0;
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
