@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="result.css" />
         <script src="./renderer.js"></script>
         <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+
+        <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         />
@@ -23,7 +28,6 @@
                         value="Add"
                         onclick="addServer()"
                     />
-
                     <input
                         type="button"
                         id="btn_clear"
@@ -32,24 +36,29 @@
                         onclick="clearTable()"
                     />
                 </form>
-
                 <br />
                 <br />
 
+                <!-- button and input text together, 
+                hide input text and set it its visibillty to 0
+                because of i can't figure it hw to reutne a value string
+                to set -->
                 <center>
                     <button
-                        onclick="changeDate()"
-                        class="waves-effect waves-light btn-large"
+                        id="week-date-button"
+                        class="waves-effect black-text waves-light btn-large"
                     >
-                        Change date
+                        <input
+                            class="datepicker datepicker-hide"
+                            id="datepicker"
+                            onclick="changeDate()"
+                        />
                     </button>
                 </center>
-
                 <br />
                 <br />
-
                 <div id="pdf-content">
-                    <h5 class="center-align" id="week-date">
+                    <h5 class="week-date center-align" id="week-date-text">
                         Week of 06/06/2020
                     </h5>
                     <table class="striped" id="server-table">

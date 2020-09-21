@@ -1,8 +1,8 @@
-function resultHTML() {
+function toResultHTML() {
     window.location.href = "result.html";
 }
 
-function indexHTML() {
+function toIndexHTML() {
     window.location.href = "index.html";
 }
 
@@ -31,7 +31,20 @@ function clearTable() {
 }
 
 function changeDate() {
-    const todaysDate = new Date();
-    document.getElementById("week-date").innerHTML =
-        "Changed to Week of " + todaysDate.toLocaleDateString().toString();
+    // .datepicker input text is not vissiable
+    const date = document.getElementById("datepicker").value;
+    document.getElementById("week-date-text").innerHTML = "Week of " + date;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // when page loaded display today's date
+    const todaysDate = new Date();
+    document.getElementById("week-date-text").innerHTML =
+        "Week of " + todaysDate.toLocaleDateString().toString();
+
+    // display when page loaded, but only when clicked throght date picker
+    var elems = document.querySelectorAll(".datepicker");
+    var instances = M.Datepicker.init(elems, {
+        format: "mm/dd/yy",
+    });
+});
