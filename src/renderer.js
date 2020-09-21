@@ -11,9 +11,14 @@ function addServer() {
     const valueOfServerTextArea = document.createTextNode(serverTextArea);
 
     const serverTableBody = document.getElementById("server-table-body");
-    const newRow = serverTableBody.insertRow(-1);
-    const newCell = newRow.insertCell(0);
+    const newRow = serverTableBody.insertRow();
+    const newCell = newRow.insertCell();
+
     newCell.appendChild(valueOfServerTextArea);
+
+    for (let i = 1; i < 7; i++) {
+        newRow.innerHTML += "<td>n/a</td>";
+    }
 }
 
 function clearTable() {
