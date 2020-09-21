@@ -14,24 +14,43 @@
     <body>
         <div class="main">
             <div class="main-wrapper">
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <textarea
-                                    id="textarea1"
-                                    class="materialize-textarea"
-                                ></textarea>
-                                <label for="textarea1">Textarea</label>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <form>
+                    <input type="text" id="txt_server" name="txt_server" />
+                    <input
+                        type="button"
+                        id="btn_add"
+                        name="btn_add"
+                        value="Add"
+                        onclick="addServer()"
+                    />
+                </form>
+
+                <form>
+                    <input
+                        type="button"
+                        id="btn_clear"
+                        name="btn_clear"
+                        value="Clear"
+                        onclick="clearTable()"
+                    />
+                </form>
+
+                <br />
+
+                <center>
+                    <button
+                        onclick="changeDate()"
+                        class="waves-effect waves-light btn-large"
+                    >
+                        Change date
+                    </button>
+                </center>
+
                 <div id="pdf-content">
                     <h5 class="center-align" id="week-date">
                         Week of 06/06/2020
                     </h5>
-                    <table class="striped">
+                    <table class="striped" id="server-table">
                         <thead>
                             <tr>
                                 <th>Servers</th>
@@ -44,7 +63,7 @@
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody id="server-table-body">
                             <tr>
                                 <td>Alvin</td>
                                 <td>Eclair</td>
@@ -52,52 +71,6 @@
                                 <td>Alvin</td>
                                 <td>Eclair</td>
                                 <td>Lollipop</td>
-
-                                <td>$0.87</td>
-                            </tr>
-                            <tr>
-                                <td>Alan</td>
-                                <td>Jellybean</td>
-                                <td>$3.76</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>Lollipop</td>
-                                <td>$0.87</td>
-                            </tr>
-                            <tr>
-                                <td>Jonathan</td>
-                                <td>Lollipop</td>
-                                <td>Jonathan</td>
-                                <td>$7.00</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                            </tr>
-                            <tr>
-                                <td>Jonathan</td>
-                                <td>Lollipop</td>
-                                <td>Jonathan</td>
-                                <td>$7.00</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                            </tr>
-                            <tr>
-                                <td>Jonathan</td>
-                                <td>Lollipop</td>
-                                <td>Jonathan</td>
-                                <td>$7.00</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
-                            </tr>
-                            <tr>
-                                <td>Jonathan</td>
-                                <td>Lollipop</td>
-                                <td>Jonathan</td>
-                                <td>$7.00</td>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
                                 <td>$0.87</td>
                             </tr>
                         </tbody>
