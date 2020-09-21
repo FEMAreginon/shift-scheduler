@@ -10,6 +10,7 @@ function addServer() {
     const serverTextArea = document.getElementById("txt_server").value;
     const valueOfServerTextArea = document.createTextNode(serverTextArea);
 
+    // add user input to table to display
     const serverTableBody = document.getElementById("server-table-body");
     const newRow = serverTableBody.insertRow();
     const newCell = newRow.insertCell();
@@ -19,6 +20,7 @@ function addServer() {
     for (let i = 1; i < 7; i++) {
         newRow.innerHTML += "<td>n/a</td>";
     }
+
 }
 
 function clearTable() {
@@ -48,3 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
         format: "mm/dd/yy",
     });
 });
+
+function printNow() {
+    var divContents = document.getElementById("pdf-content").innerHTML; 
+    var a = window.open('', '', 'height=500, width=500'); 
+    a.document.write('<html>'); 
+    a.document.write('<body >' ); 
+    a.document.write(divContents); 
+    a.document.write('</body></html>'); 
+    a.document.close(); 
+    a.print(); 
+}

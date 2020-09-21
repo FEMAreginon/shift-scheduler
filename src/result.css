@@ -44,3 +44,18 @@ body {
     opacity: 0;
     cursor: pointer;
 }
+
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #pdf-content, #pdf-content * {
+      visibility: visible;
+    }
+    #pdf-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }

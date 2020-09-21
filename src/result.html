@@ -20,6 +20,7 @@
         <div class="main">
             <div class="main-wrapper">
                 <form>
+                    <h5>Add servers</h5>
                     <input type="text" id="txt_server" name="txt_server" />
                     <input
                         type="button"
@@ -35,6 +36,13 @@
                         value="Clear"
                         onclick="clearTable()"
                     />
+                    <input
+                    type="button"
+                    id="btn_random"
+                    name="btn_random"
+                    value="Random"
+                    onclick="random()"
+                />
                 </form>
                 <br />
                 <br />
@@ -75,7 +83,7 @@
                         </thead>
 
                         <tbody id="server-table-body">
-                            <tr>
+                            <!-- <tr>
                                 <td>Alvin</td>
                                 <td>Eclair</td>
                                 <td>$0.87</td>
@@ -92,14 +100,14 @@
                                 <td>ssEclair</td>
                                 <td>2rLollipop</td>
                                 <td>$220.87</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
                 <div class="button-center">
                     <button
                         id="pdf"
-                        onclick="saveInvoiceToStorage()"
+                        onclick="printNow()"
                         class="waves-effect waves-light btn-large"
                     >
                         PRINT TO PDF

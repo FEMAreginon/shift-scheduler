@@ -54,6 +54,12 @@ class Schedule {
     }
 
     printServerSchedule() {
-        console.table(this.schedule);
+        console.log(this.schedule);
     }
 }
+
+const s = new Schedule();
+
+s.addServer("phews");
+s.generateRandomShifts();
+s.printServerSchedule();
