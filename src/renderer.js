@@ -18,10 +18,11 @@ function addServer() {
 
 function clearTable() {
     const serverTableBody = document.getElementById("server-table-body");
+    document.getElementById("txt_server").value = "";
+
     while (serverTableBody.rows.length > 0) {
         serverTableBody.deleteRow(0);
     }
-
 }
 
 function changeDate() {
