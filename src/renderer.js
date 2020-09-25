@@ -16,8 +16,8 @@ function addServer() {
     const newCell = newRow.insertCell();
 
     if (serverTextArea === "" || valueOfServerTextArea == "") {
-        alert("empty");
-        return null;
+        M.toast({ html: "Input a value!" });
+        return false;
     } else {
         newCell.appendChild(valueOfServerTextArea);
         for (let i = 1; i < 7; i++) {
@@ -29,6 +29,8 @@ function addServer() {
 function clearTable() {
     const serverTableBody = document.getElementById("server-table-body");
     document.getElementById("txt_server").value = "";
+
+    M.Toast.dismissAll();
 
     while (serverTableBody.rows.length > 0) {
         serverTableBody.deleteRow(0);

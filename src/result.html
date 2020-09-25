@@ -6,11 +6,6 @@
         <link rel="stylesheet" href="result.css" />
         <script src="./renderer.js"></script>
         <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-        />
-
-        <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         />
@@ -19,21 +14,19 @@
     <body>
         <div class="main">
             <div class="main-wrapper">
+                <br>
+                <br>
                 <form name"server_form">
                     <h5>Add servers</h5>
-                    <input type="text" id="txt_server" name="txt_server" />
+                    <input type="text" id="txt_server"/>
                     <a 
-                    class="waves-effect waves-light btn
-                    type="button submit"
+                    class="waves-effect waves-light btn"  
                     id="btn_add"
-                    name="btn_add"
                     value="Add"
                     onclick="addServer()"">Add</a>
                     <a 
-                    class="waves-effect waves-light btn                         
-                    type="button submit"
+                    class="waves-effect waves-light btn"                         
                     id="btn_clear"
-                    name="btn_clear"
                     value="Clear"
                     onclick="clearTable()"">Clear</a>
                 </form>
