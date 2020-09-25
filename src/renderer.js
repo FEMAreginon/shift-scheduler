@@ -15,10 +15,14 @@ function addServer() {
     const newRow = serverTableBody.insertRow();
     const newCell = newRow.insertCell();
 
-    newCell.appendChild(valueOfServerTextArea);
-
-    for (let i = 1; i < 7; i++) {
-        newRow.innerHTML += "<td class='td-centered'>n/a</td>";
+    if (serverTextArea === "" || valueOfServerTextArea == "") {
+        alert("empty");
+        return null;
+    } else {
+        newCell.appendChild(valueOfServerTextArea);
+        for (let i = 1; i < 7; i++) {
+            newRow.innerHTML += "<td class='td-centered'>n/a</td>";
+        }
     }
 }
 
