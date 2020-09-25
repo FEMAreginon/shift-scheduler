@@ -18,9 +18,8 @@ function addServer() {
     newCell.appendChild(valueOfServerTextArea);
 
     for (let i = 1; i < 7; i++) {
-        newRow.innerHTML += "<td>n/a</td>";
+        newRow.innerHTML += "<td class='td-centered'>n/a</td>";
     }
-
 }
 
 function clearTable() {
@@ -35,9 +34,6 @@ function clearTable() {
 function randommize() {
     alert("this will generate randomize");
 }
-
-
-
 
 // function changeDate() {
 //     // .datepicker input text is not vissiable
@@ -59,12 +55,12 @@ function randommize() {
 // });
 
 function printNow() {
-    var divContents = document.getElementById("pdf-content").innerHTML; 
-    var a = window.open('', '', 'height=500, width=500'); 
-    a.document.write('<html>'); 
-    a.document.write('<body >' ); 
-    a.document.write(divContents); 
-    a.document.write('</body></html>'); 
-    a.document.close(); 
-    a.print(); 
+    var divContents = document.getElementById("pdf-content").innerHTML;
+    var a = window.open("", "", "height=500, width=500");
+    a.document.write("<html>");
+    a.document.write("<body >");
+    a.document.write(divContents);
+    a.document.write("</body></html>");
+    a.document.close();
+    a.print();
 }
