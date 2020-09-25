@@ -22,48 +22,21 @@
                 <form>
                     <h5>Add servers</h5>
                     <input type="text" id="txt_server" name="txt_server" />
-                    <input
-                        type="button"
-                        id="btn_add"
-                        name="btn_add"
-                        value="Add"
-                        onclick="addServer()"
-                    />
-                    <input
-                        type="button"
-                        id="btn_clear"
-                        name="btn_clear"
-                        value="Clear"
-                        onclick="clearTable()"
-                    />
-                    <input
+                    <a 
+                    class="waves-effect waves-light btn
                     type="button"
-                    id="btn_random"
-                    name="btn_random"
-                    value="Random"
-                    onclick="random()"
-                />
+                    id="btn_add"
+                    name="btn_add"
+                    value="Add"
+                    onclick="addServer()"">Add</a>
+                    <a 
+                    class="waves-effect waves-light btn                         
+                    type="button"
+                    id="btn_clear"
+                    name="btn_clear"
+                    value="Clear"
+                    onclick="clearTable()"">Clear</a>
                 </form>
-                <br />
-                <br />
-
-                <!-- button and input text together, 
-                hide input text and set it its visibillty to 0
-                because of i can't figure it hw to reutne a value string
-                to set -->
-                <center>
-                    <button
-                        id="week-date-button"
-                        class="waves-effect black-text waves-light btn-large"
-                    >
-                        <input
-                            class="datepicker datepicker-hide"
-                            id="datepicker"
-                            onclick="changeDate()"
-                        />
-                    </button>
-                </center>
-                <br />
                 <br />
                 <div id="pdf-content">
                     <h5 class="week-date center-align" id="week-date-text">
@@ -112,6 +85,13 @@
                     >
                         PRINT TO PDF
                     </button>
+
+                        <button
+                            id="week-date-button"
+                            class="waves-effecti waves-light btn-large"
+                        >
+                            Randomize!
+                        </button>
                 </div>
             </div>
         </div>
