@@ -6,6 +6,19 @@ function toIndexHTML() {
     window.location.href = "index.html";
 }
 
+function randomShift() {
+    // w = wait
+    // h = host
+    const SHIFTS = "WH";
+    let resutl = "";
+
+    for (let i = 0; i < 1; i++) {
+        resutl += SHIFTS.charAt(Math.floor(Math.random() * SHIFTS.length));
+    }
+
+    return resutl;
+}
+
 function addServer() {
     const serverTextArea = document.getElementById("txt_server").value;
     const valueOfServerTextArea = document.createTextNode(serverTextArea);
@@ -41,32 +54,25 @@ function randommize() {
     alert("this will generate randomize");
 }
 
-// function changeDate() {
-//     // .datepicker input text is not vissiable
-//     const date = document.getElementById("datepicker").value;
-//     document.getElementById("week-date-text").innerHTML = "Week of " + date;
-// }
+function getMonday(date) {
+    var day = date.getDay() || 7;
+    if (day !== 1) date.setHours(-24 * (day - 1));
+    return date;
+}
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     // when page loaded display today's date
-//     const todaysDate = new Date();
-//     document.getElementById("week-date-text").innerHTML =
-//         "Week of " + todaysDate.toLocaleDateString().toString();
+document.addEventListener("DOMContentLoaded", function () {
+    // when page loaded display next week monday date
+    const nextWeekMonday = getMonday(new Date()) + 7; // Mon Nov 08 2010
 
-//     // display when page loaded, but only when clicked throght date picker
-//     var elems = document.querySelectorAll(".datepicker");
-//     var instances = M.Datepicker.init(elems, {
-//         format: "mm/dd/yy",
-//     });
-// });
+    document.getElementById("week-date-text").innerHTML =
+        "Week of " + nextWeekMonday.toLocaleDateString().toString();
+});
 
 function printNow() {
     var divContents = document.getElementById("pdf-content").innerHTML;
-    var a = window.open("", "", "height=500, width=500");
-    a.document.write("<html>");
-    a.document.write("<body >");
+    var a = window.open("", "", "height=1000, width=800");
+
     a.document.write(divContents);
-    a.document.write("</body></html>");
     a.document.close();
     a.print();
 }
