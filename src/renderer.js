@@ -62,10 +62,11 @@ function getMonday(date) {
 
 document.addEventListener("DOMContentLoaded", function () {
     // when page loaded display next week monday date
-    const nextWeekMonday = getMonday(new Date()) + 7; // Mon Nov 08 2010
+    let thisWeekMonday = getMonday(new Date());
+    thisWeekMonday.setDate(thisWeekMonday.getDate() + 7);
 
     document.getElementById("week-date-text").innerHTML =
-        "Week of " + nextWeekMonday.toLocaleDateString().toString();
+        "Week of " + thisWeekMonday.toLocaleDateString().toString();
 });
 
 function printNow() {
