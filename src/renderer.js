@@ -31,6 +31,7 @@ function addServer(form) {
 
     if (serverTextArea === "" || valueOfServerTextArea == "") {
         M.toast({ html: "Input a value!" });
+        overlayOn();
         return false;
     } else {
         newCell.appendChild(valueOfServerTextArea);
@@ -46,6 +47,7 @@ function clearTable() {
     document.getElementById("txt_server").value = "";
 
     M.Toast.dismissAll();
+    overlayOff();
 
     while (serverTableBody.rows.length > 0) {
         serverTableBody.deleteRow(0);
@@ -78,4 +80,13 @@ function printNow() {
     a.document.write(divContents);
     a.document.close();
     a.print();
+}
+
+function overlayOn() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function overlayOff() {
+    document.getElementById("overlay").style.display = "none";
+    clearTable();
 }
