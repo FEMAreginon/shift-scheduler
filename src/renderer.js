@@ -19,8 +19,9 @@ function randomShift() {
     return resutl;
 }
 
-function addServer() {
-    const serverTextArea = document.getElementById("txt_server").value;
+function addServer(form) {
+    //const serverTextArea = document.getElementById("txt_server").value;
+    const serverTextArea = document.forms.form_server.txt_server.value;
     const valueOfServerTextArea = document.createTextNode(serverTextArea);
 
     // add user input to table to display
@@ -37,6 +38,7 @@ function addServer() {
             newRow.innerHTML += "<td class='td-centered'>n/a</td>";
         }
     }
+    return false;
 }
 
 function clearTable() {

@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>ShiftScheduler</title>
-        <link rel="stylesheet" href="result.css" />
-        <script src="./renderer.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    </head>
-    <body>
-        <div class="main">
-            <div class="main-wrapper">
-                <br>
-                <br>
-                <form name"server_form">
-                    <h5>Add employees</h5>
-                    <input type="text" id="txt_server"/>
-                    <a 
-                    class="waves-effect waves-light btn"  
-                    id="btn_add"
-                    value="Add"
-                    onclick="addServer()"">Add</a>
-                    <a 
-                    class="waves-effect waves-light btn"                         
-                    id="btn_clear"
-                    value="Clear"
-                    onclick="clearTable()"">Clear</a>
-                </form>
-                <br />
-                <div id="pdf-content">
-                    <h5 class="week-date center-align" id="week-date-text">
-                        Week of 06/06/2020
-                    </h5>
-                    <table class="striped" id="server-table">
-                        <thead>
-                            <tr>
-                                <th>Servers</th>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                                <th>Saturday</th>
-                            </tr>
-                        </thead>
-                        <tbody id="server-table-body">
-                            <!-- <tr>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ShiftScheduler</title>
+    <link rel="stylesheet" href="result.css" />
+    <script src="./renderer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-wrapper">
+            <br>
+            <br>
+            <h5>Add employees</h5>
+            <form name='form_server' onsubmit='return addServer(this);'>
+
+                <input type="text" id="txt_server">
+                <input class="waves-effecti waves-light btn" type="button" id="btn_add" value="Add" onclick="addServer()" />
+                <input class="waves-effecti waves-light btn" type="button" id="btn_clear" value="Clear"
+                    onclick="clearTable()" />
+            </form>
+            <br />
+            <div id="pdf-content">
+                <h5 class="week-date center-align" id="week-date-text">
+                    Week of 06/06/2020
+                </h5>
+                <table class="striped" id="server-table">
+                    <thead>
+                        <tr>
+                            <th>Servers</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody id="server-table-body">
+                        <!-- <tr>
                                 <td>Alvin</td>
                                 <td>Eclair</td>
                                 <td>$0.87</td>
@@ -66,26 +59,20 @@
                                 <td>2rLollipop</td>
                                 <td>$220.87</td>
                             </tr> -->
-                        </tbody>
-                    </table>
-                </div>
-                <div class="button-center">
-                    <button
-                        id="pdf"
-                        onclick="printNow()"
-                        class="waves-effect waves-light btn-large"
-                    >
-                        PRINT TO PDF
-                    </button>
+                    </tbody>
+                </table>
+            </div>
+            <div class="button-center">
+                <button id="pdf" onclick="printNow()" class="waves-effect waves-light btn-large">
+                    PRINT TO PDF
+                </button>
 
-                        <button
-                            id="week-date-button"
-                            class="waves-effecti waves-light btn-large"
-                        >
-                            Randomize!
-                        </button>
-                </div>
+                <button id="week-date-button" class="waves-effecti waves-light btn-large">
+                    Randomize!
+                </button>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
