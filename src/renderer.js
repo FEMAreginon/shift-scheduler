@@ -9,7 +9,8 @@ function toIndexHTML() {
 function randomShift() {
     // w = wait
     // h = host
-    const SHIFTS = "WH";
+    //   = off
+    const SHIFTS = "WH ";
     let resutl = "";
 
     for (let i = 0; i < 1; i++) {
@@ -65,10 +66,6 @@ function clearTable() {
     }
 }
 
-function randommize() {
-    alert("this will generate randomize");
-}
-
 function getMonday(date) {
     var day = date.getDay() || 7;
     if (day !== 1) date.setHours(-24 * (day - 1));
@@ -77,6 +74,7 @@ function getMonday(date) {
 
 // when page loaded display next week monday date
 document.addEventListener("DOMContentLoaded", function () {
+    // will get monday date of this week amd add 7 days to return date of next week monday
     let thisWeekMonday = getMonday(new Date());
     thisWeekMonday.setDate(thisWeekMonday.getDate() + 7);
 
