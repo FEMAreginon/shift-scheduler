@@ -50,13 +50,15 @@ function clearServerTextAreaAfterHittingAddOrEnter() {
 
 function clearTable() {
     const serverTableBody = document.getElementById("server-table-body");
-    document.getElementById("txt_server").value = "";
-
     M.Toast.dismissAll();
 
-    while (serverTableBody.rows.length > 0) {
-        serverTableBody.deleteRow(0);
-        overlayOff();
+    if (serverTableBody.rows.length === 0) {
+        M.toast({ html: "Nothing to clear!" });
+        overlayOn();
+    } else {
+        while (serverTableBody.rows.length > 0) {
+            serverTableBody.deleteRow(0);
+        }
     }
 }
 
