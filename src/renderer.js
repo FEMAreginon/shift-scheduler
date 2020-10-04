@@ -64,8 +64,8 @@ function getMonday(date) {
     return date;
 }
 
+// when page loaded display next week monday date
 document.addEventListener("DOMContentLoaded", function () {
-    // when page loaded display next week monday date
     let thisWeekMonday = getMonday(new Date());
     thisWeekMonday.setDate(thisWeekMonday.getDate() + 7);
 
@@ -82,6 +82,7 @@ function printNow() {
     a.print();
 }
 
+// this will dim the webapge when user try to add without providing any text aka empty
 function overlayOn() {
     document.getElementById("overlay").style.display = "block";
 }
