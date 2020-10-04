@@ -20,7 +20,6 @@ function randomShift() {
 }
 
 function addServer(form) {
-    //const serverTextArea = document.getElementById("txt_server").value;
     const serverTextArea = document.forms.form_server.txt_server.value;
     const valueOfServerTextArea = document.createTextNode(serverTextArea);
 
@@ -38,8 +37,16 @@ function addServer(form) {
         for (let i = 1; i < 7; i++) {
             newRow.innerHTML += "<td class='td-centered'>n/a</td>";
         }
+        clearServerTextAreaAfterHittingAddOrEnter();
     }
+
     return false;
+}
+
+function clearServerTextAreaAfterHittingAddOrEnter() {
+    setTimeout(function () {
+        document.getElementById("txt_server").value = "";
+    }, 50);
 }
 
 function clearTable() {
