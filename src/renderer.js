@@ -52,10 +52,13 @@ function clearTable() {
     const serverTableBody = document.getElementById("server-table-body");
     M.Toast.dismissAll();
 
+    // if there is nothing else to clear, display a message with overlay efferct on
     if (serverTableBody.rows.length === 0) {
         M.toast({ html: "Nothing to clear!" });
         overlayOn();
-    } else {
+    }
+    // otherwise if there are rows, delete the rows when the button is pres
+    else {
         while (serverTableBody.rows.length > 0) {
             serverTableBody.deleteRow(0);
         }
