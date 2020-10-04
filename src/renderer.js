@@ -23,23 +23,22 @@ function addServer(form) {
     const serverTextArea = document.forms.form_server.txt_server.value;
     const valueOfServerTextArea = document.createTextNode(serverTextArea);
 
-    // add user input to table to display
-    const serverTableBody = document.getElementById("server-table-body");
-    const newRow = serverTableBody.insertRow();
-    const newCell = newRow.insertCell();
-
     if (serverTextArea === "" || valueOfServerTextArea == "") {
         M.toast({ html: "Input a value!" });
         overlayOn();
         return false;
     } else {
+        // add user input to table to display
+        const serverTableBody = document.getElementById("server-table-body");
+        const newRow = serverTableBody.insertRow();
+        const newCell = newRow.insertCell();
+
         newCell.appendChild(valueOfServerTextArea);
         for (let i = 1; i < 7; i++) {
             newRow.innerHTML += "<td class='td-centered'>n/a</td>";
         }
         clearServerTextAreaAfterHittingAddOrEnter();
     }
-
     return false;
 }
 
@@ -96,5 +95,5 @@ function overlayOn() {
 
 function overlayOff() {
     document.getElementById("overlay").style.display = "none";
-    clearTable();
+    M.Toast.dismissAll();
 }
