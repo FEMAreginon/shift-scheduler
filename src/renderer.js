@@ -7,9 +7,7 @@ function toIndexHTML() {
 }
 
 function randomShift() {
-    // w = wait
-    //   = off
-    const SHIFTS = "W ";
+    const SHIFTS = "w ";
     let resutl = "";
 
     for (let i = 0; i < 1; i++) {
@@ -26,6 +24,7 @@ function randomizeShifts() {
     // iterate throught all the td tag, then access to the tags that has td center class and change its value.
     for (let i = 0; i < tds.length; i++) {
         if (tds[i].className == "td-centered") {
+            // Set a new width
             tds[i].innerHTML = randomShift() + " / " + randomShift();
         }
     }
@@ -51,7 +50,6 @@ function addServer(form) {
         }
         clearServerTextAreaAfterHittingAddOrEnter();
     }
-    console.table(schedule);
     return false;
 }
 
@@ -74,14 +72,11 @@ function clearTable() {
     else {
         while (serverTableBody.rows.length > 0) {
             serverTableBody.deleteRow(0);
-            schedule = [];
-            console.table(schedule);
-            console.clear();
-            console.log("schedule table has been clear");
         }
     }
 }
 
+// this will return monday date of this week, doens't matter what week day it is.
 function getMonday(date) {
     var day = date.getDay() || 7;
     if (day !== 1) date.setHours(-24 * (day - 1));
