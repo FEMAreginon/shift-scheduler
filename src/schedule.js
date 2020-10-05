@@ -54,7 +54,7 @@ class Schedule {
     }
 
     printServerSchedule() {
-        console.log(this.schedule);
+        console.table(this.schedule);
     }
 }
 

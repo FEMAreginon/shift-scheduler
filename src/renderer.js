@@ -1,3 +1,5 @@
+let schedule = [];
+
 function toResultHTML() {
     window.location.href = "result.html";
 }
@@ -8,9 +10,8 @@ function toIndexHTML() {
 
 function randomShift() {
     // w = wait
-    // h = host
     //   = off
-    const SHIFTS = "WH ";
+    const SHIFTS = "W ";
     let resutl = "";
 
     for (let i = 0; i < 1; i++) {
@@ -18,6 +19,21 @@ function randomShift() {
     }
 
     return resutl;
+}
+
+function randomizeShifts() {
+    // console.log("Randomizing random shifts");
+    // console.table(schedule);
+    var tbody = document.getElementsByTagName("tbody")[0];
+    var tds = tbody.getElementsByTagName("td");
+
+    // iterate throught all the td tag, then access to the tags that has td center class and change its value.
+    for (let i = 0; i < tds.length; i++) {
+        if (tds[i].className == "td-centered") {
+            // Set a new width
+            tds[i].innerHTML = randomShift() + " / " +  randomShift();
+        }
+    }
 }
 
 function addServer(form) {
@@ -35,11 +51,13 @@ function addServer(form) {
         const newCell = newRow.insertCell();
 
         newCell.appendChild(valueOfServerTextArea);
-        for (let i = 1; i < 7; i++) {
+        for (let i = 0; i < 6; i++) {
+            schedule.push([randomShift(), randomShift()]);
             newRow.innerHTML += "<td class='td-centered'>n/a</td>";
         }
         clearServerTextAreaAfterHittingAddOrEnter();
     }
+    console.table(schedule);
     return false;
 }
 
@@ -62,6 +80,10 @@ function clearTable() {
     else {
         while (serverTableBody.rows.length > 0) {
             serverTableBody.deleteRow(0);
+            schedule = [];
+            console.table(schedule);
+            console.clear();
+            console.log("schedule table has been clear");
         }
     }
 }
