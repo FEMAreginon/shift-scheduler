@@ -31,12 +31,21 @@ function randomizeShifts() {
             if (tds[i].className == "td-centered") {
                 // Set a new width
                 tds[i].innerHTML =
-                    "<div contenteditable='true'>" +
+                    "<div contenteditable='true' id='editable'>" +
                     randomShift() +
                     " / " +
                     randomShift() +
                     "</div>";
             }
+
+            // some how the codes below doens't work. gonan leave this just to come
+            // back later
+            const editableText = document.getElementById("editable");
+            editableText.addEventListener("keydown", function (event) {
+                if (event.key === "Enter" || event.key === "Esc") {
+                    alert("hi");
+                }
+            });
         }
     }
 }
@@ -56,7 +65,9 @@ function addServer(form) {
         const newCell = newRow.insertCell();
 
         newCell.innerHTML =
-            "<div contenteditable='true'><b>" + serverTextArea + "<b></div>";
+            "<div contenteditable='true' id='editable'><b>" +
+            serverTextArea +
+            "<b></div>";
         for (let i = 0; i < 6; i++) {
             newRow.innerHTML += "<td class='td-centered'>n/a</td>";
         }
