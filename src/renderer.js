@@ -30,8 +30,12 @@ function randomizeShifts() {
         for (let i = 0; i < tds.length; i++) {
             if (tds[i].className == "td-centered") {
                 // Set a new width
-                tds[i].innerHTML = "<div contenteditable='true'>" + 
-                randomShift() + " / " + randomShift() + "</div>";
+                tds[i].innerHTML =
+                    "<div contenteditable='true'>" +
+                    randomShift() +
+                    " / " +
+                    randomShift() +
+                    "</div>";
             }
         }
     }
@@ -51,7 +55,8 @@ function addServer(form) {
         const newRow = serverTableBody.insertRow();
         const newCell = newRow.insertCell();
 
-        newCell.appendChild(valueOfServerTextArea);
+        newCell.innerHTML =
+            "<div contenteditable='true'><b>" + serverTextArea + "<b></div>";
         for (let i = 0; i < 6; i++) {
             newRow.innerHTML += "<td class='td-centered'>n/a</td>";
         }
