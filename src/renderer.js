@@ -18,14 +18,20 @@ function randomShift() {
 }
 
 function randomizeShifts() {
-    var tbody = document.getElementsByTagName("tbody")[0];
-    var tds = tbody.getElementsByTagName("td");
+    const serverTableBody = document.getElementById("server-table-body");
+    const tbody = document.getElementsByTagName("tbody")[0];
+    const tds = tbody.getElementsByTagName("td");
 
-    // iterate throught all the td tag, then access to the tags that has td center class and change its value.
-    for (let i = 0; i < tds.length; i++) {
-        if (tds[i].className == "td-centered") {
-            // Set a new width
-            tds[i].innerHTML = randomShift() + " / " + randomShift();
+    if (serverTableBody.rows.length === 0) {
+        M.toast({ html: "Nothing to randomize!" });
+        overlayOn();
+    } else {
+        // iterate throught all the td tag, then access to the tags that has td center class and change its value.
+        for (let i = 0; i < tds.length; i++) {
+            if (tds[i].className == "td-centered") {
+                // Set a new width
+                tds[i].innerHTML = randomShift() + " / " + randomShift();
+            }
         }
     }
 }
