@@ -30,7 +30,8 @@ function randomizeShifts() {
         for (let i = 0; i < tds.length; i++) {
             if (tds[i].className == "td-centered") {
                 // Set a new width
-                tds[i].innerHTML = randomShift() + " / " + randomShift();
+                tds[i].innerHTML = "<div contenteditable='true'>" + 
+                randomShift() + " / " + randomShift() + "</div>";
             }
         }
     }
