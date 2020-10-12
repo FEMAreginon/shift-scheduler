@@ -113,7 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
     thisWeekMonday.setDate(thisWeekMonday.getDate() + 7);
 
     document.getElementById("week-date-text").innerHTML =
-        "Week of " + thisWeekMonday.toLocaleDateString().toString();
+        "<div contenteditable='true'>" +
+        "Week of " +
+        thisWeekMonday.toLocaleDateString().toString() +
+        "</div>";
 });
 
 function printNow() {
