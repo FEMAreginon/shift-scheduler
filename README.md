@@ -13,8 +13,7 @@ This is a fun project I developed for the the owner of the sushi restaurant whil
 
 # Screenshot
 
-<img src="https://raw.githubusercontent.com/wajeht/ShiftScheduler/master/src/images/screenshot.png" width="200">
-<img src="https://raw.githubusercontent.com/wajeht/ShiftScheduler/master/src/images/screenshot.png" width="200">
+<img src="https://raw.githubusercontent.com/wajeht/ShiftScheduler/master/src/images/screenshot.png" width="200"><img src="https://github.com/wajeht/ShiftScheduler/blob/master/src/images/result.png?raw=true" width="200">
 
 # Development
 
