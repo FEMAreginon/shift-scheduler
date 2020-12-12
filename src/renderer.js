@@ -1,7 +1,3 @@
-function toResultHTML() {
-    window.location.href = 'result.html';
-}
-
 function randomShift() {
     const SHIFTS = 'w ';
     let resutl = '';
@@ -125,15 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
         indexPage.hidden = true;
     });
 });
-
-function printNow() {
-    var divContents = document.getElementById('pdf-content').innerHTML;
-    var a = window.open('', '', 'height=1000, width=800');
-
-    a.document.write(divContents);
-    a.document.close();
-    a.print();
-}
 
 // this will dim the webapge when user try to add without providing any text aka empty
 function overlayOn() {

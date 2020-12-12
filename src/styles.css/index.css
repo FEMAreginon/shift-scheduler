@@ -95,16 +95,12 @@ p {
     #pdf-content * {
         visibility: visible;
     }
+
     #pdf-content {
         position: absolute;
         left: 0;
         top: 0;
     }
-}
-
-/* center the shift conten */
-.td-centered {
-    text-align: center;
 }
 
 /* center the toatst */

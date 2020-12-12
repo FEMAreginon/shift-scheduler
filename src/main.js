@@ -1,6 +1,4 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const os = require('os');
 
@@ -15,7 +13,9 @@ const createWindow = () => {
         resizable: false,
         fullscreen: false,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js'),
+            enableRemoteModule: true,
+            nodeIntegration: true,
+            nodeIntegrationInSubFrames: true,
         },
     });
 
