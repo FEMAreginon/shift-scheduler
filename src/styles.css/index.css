@@ -49,7 +49,16 @@ body {
     box-shadow: 0 0 10px #2e857d;
 }
 
-.button-center {
+.button-center-index {
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button-center-result {
     margin: 0;
     position: absolute;
     top: 90%;
