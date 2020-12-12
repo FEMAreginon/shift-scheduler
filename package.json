@@ -3,7 +3,7 @@
     "productName": "shiftscheduler",
     "version": "1.0.0",
     "description": "This ShiftScheduler app allows you to create random shifts for servers in restaurant industry",
-    "main": "src/index.js",
+    "main": "src/main.js",
     "scripts": {
         "start": "electron-forge start",
         "package": "electron-forge package",
