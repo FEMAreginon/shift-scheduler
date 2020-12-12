@@ -113,6 +113,19 @@ document.addEventListener('DOMContentLoaded', function () {
         '</div>';
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const indexPage = document.getElementById('indexPage');
+    const resultPage = document.getElementById('resultPage');
+    resultPage.hidden = true;
+
+    const goToResultPage = document.getElementById('goToResultPage');
+
+    goToResultPage.addEventListener('click', () => {
+        resultPage.hidden = false;
+        indexPage.hidden = true;
+    });
+});
+
 function printNow() {
     var divContents = document.getElementById('pdf-content').innerHTML;
     var a = window.open('', '', 'height=1000, width=800');
