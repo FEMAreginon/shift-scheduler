@@ -1,3 +1,7 @@
+function toResultHTML() {
+    window.location.href = 'result.html';
+}
+
 function randomShift() {
     const SHIFTS = 'w ';
     let resutl = '';
