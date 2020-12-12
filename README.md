@@ -24,8 +24,9 @@ This is a fun project I developed for the the owner of the sushi restaurant whil
 
 # Contribute
 
-Let me know if you would contribute into this projects. Fork it and work on it on your own branch. Send me a pull request after. I will merge it. 0. `fork this repo`
+Let me know if you would contribute into this projects. Fork it and work on it on your own branch. Send me a pull request after. I will merge it. 
 
+0. `fork this repo`
 1. `make new branch`
 2. `send pull request`
 
