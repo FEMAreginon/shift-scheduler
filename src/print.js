@@ -1,7 +1,6 @@
 const electron = require('electron');
 const fs = require('fs');
 const os = require('os');
-require('materialize-css');
 
 // Importing BrowserWindow from Main
 const BrowserWindow = electron.remote.BrowserWindow;
