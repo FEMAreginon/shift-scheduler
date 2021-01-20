@@ -13,7 +13,7 @@ This is a fun project I developed for the the owner of the sushi restaurant whil
 
 # Demo
 
-[wajeht](https://jaw.cool/projects/)
+[Click here for demo video!](https://jaw.cool/projects/)
 
 # Screenshot
 
